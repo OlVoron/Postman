@@ -1,0 +1,349 @@
+{
+	"info": {
+		"_postman_id": "1d93ec30-0d8c-4903-bf0c-16dd21226e6c",
+		"name": "NASA",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29356510"
+	},
+	"item": [
+		{
+			"name": "APOD Astronomy Picture of the Day",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"",
+							"pm.test(\"Response status code is 200\", function () {",
+							"    pm.expect(pm.response.code).to.equal(200);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Response has required fields\", function () {",
+							"    const responseData = pm.response.json();",
+							"",
+							"    pm.expect(responseData).to.be.an('object');",
+							"    pm.expect(responseData).to.have.all.keys('copyright', 'date', 'explanation', 'hdurl', 'media_type', 'service_version', 'title', 'url');",
+							"});",
+							"",
+							"",
+							"pm.test(\"Date is in a valid date format\", function () {",
+							"    const responseData = pm.response.json();",
+							"",
+							"    pm.expect(responseData).to.be.an('object');",
+							"    pm.expect(responseData.date).to.match(/^\\d{4}-\\d{2}-\\d{2}$/);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Explanation is a non-empty string\", function () {",
+							"    const responseData = pm.response.json();",
+							"",
+							"    pm.expect(responseData).to.be.an('object');",
+							"    pm.expect(responseData.explanation).to.exist.and.to.be.a('string').and.to.not.be.empty;",
+							"});",
+							"",
+							"pm.test(\"URL format is valid\", function () {",
+							"    const responseData = pm.response.json();",
+							"",
+							"    pm.expect(responseData.url).to.match(/^https?:\\/\\/[^\\s/$.?#].[^\\s]*$/);",
+							"});",
+							"",
+							"pm.test(\"HDURL is a non-empty string\", function () {",
+							"    const responseData = pm.response.json();",
+							"",
+							"    pm.expect(responseData.hdurl).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Value should not be empty\");",
+							"});",
+							"",
+							"pm.test(\"Media type is either 'image' or 'video'\", function () {",
+							"    const responseData = pm.response.json();",
+							"",
+							"    pm.expect(responseData).to.be.an('object');",
+							"    pm.expect(responseData.media_type).to.exist.and.to.be.oneOf(['image', 'video']);",
+							"});",
+							"",
+							"pm.test(\"Title is a non-empty string\", function () {",
+							"    const responseData = pm.response.json();",
+							"",
+							"    pm.expect(responseData).to.be.an('object');",
+							"    pm.expect(responseData.title).to.exist.and.to.be.a('string').and.to.have.lengthOf.at.least(1, \"Value should not be empty\");",
+							"});",
+							"",
+							"pm.test(\"Service version is a non-empty string\", function () {",
+							"    const responseData = pm.response.json();",
+							"",
+							"    pm.expect(responseData.service_version).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Value should not be empty\");",
+							"});",
+							"",
+							"pm.test(\"Copyright is a non-empty string\", function () {",
+							"    const responseData = pm.response.json();",
+							"",
+							"    pm.expect(responseData).to.be.an('object');",
+							"    pm.expect(responseData).to.have.property('copyright').and.to.be.a('string');",
+							"    pm.expect(responseData).to.have.property('copyright').and.to.have.lengthOf.at.least(1, \"Value should not be empty\");",
+							"});",
+							"",
+							"pm.test(\"Response time is less than 500ms\", function () {",
+							"    pm.expect(pm.response.responseTime).to.be.below(500);",
+							"});",
+							"",
+							"pm.test(\"Response size is less than 1500 B\", function () {",
+							"    pm.expect(pm.response.responseSize).to.be.below(1500);",
+							"});",
+							"",
+							"pm.test(\"Header is correct\", function () {",
+							"    pm.response.to.have.header(\"Content-Type\", \"application/json\");",
+							"    pm.response.to.have.header(\"Connection\", \"keep-alive\");",
+							"});",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.nasa.gov/planetary/apod?api_key=DEMO_KEY",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nasa",
+						"gov"
+					],
+					"path": [
+						"planetary",
+						"apod"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "DEMO_KEY"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Asteroids-NeoWs",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"",
+							"pm.test(\"Response status code is 200\", function () {",
+							"    pm.expect(pm.response.code).to.equal(200);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Validate the 'links' object\", function () {",
+							"    const responseData = pm.response.json();",
+							"",
+							"    pm.expect(responseData.links).to.be.an('object');",
+							"    pm.expect(responseData.links.self).to.exist.and.to.be.a('string');",
+							"});",
+							"",
+							"",
+							"pm.test(\"The id should be a non-empty string\", function () {",
+							"    const responseData = pm.response.json();",
+							"",
+							"    pm.expect(responseData).to.be.an('object');",
+							"    pm.expect(responseData.id).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Value should not be empty\");",
+							"});",
+							"",
+							"",
+							"pm.test(\"The neo_reference_id should be a non-empty string\", function () {",
+							"    const responseData = pm.response.json();",
+							"",
+							"    pm.expect(responseData).to.be.an('object');",
+							"    pm.expect(responseData.neo_reference_id).to.be.a('string').and.to.have.lengthOf.at.least(1, \"Value should not be empty\");",
+							"});",
+							"",
+							"",
+							"",
+							"",
+							"pm.test(\"Response has the required fields\", function () {",
+							"    const responseData = pm.response.json();",
+							"",
+							"    pm.expect(responseData).to.be.an('object');",
+							"    pm.expect(responseData.name).to.exist.and.to.be.a('string');",
+							"    pm.expect(responseData.designation).to.exist.and.to.be.a('string');",
+							"    pm.expect(responseData.nasa_jpl_url).to.exist.and.to.be.a('string');",
+							"    pm.expect(responseData.absolute_magnitude_h).to.exist.and.to.be.a('number');",
+							"});",
+							"",
+							"",
+							"pm.test(\"nasa_jpl_url is a valid URL\", function () {",
+							"    const responseData = pm.response.json();",
+							"",
+							"    pm.expect(responseData.nasa_jpl_url).to.exist.and.to.be.a('string');",
+							"    pm.expect(responseData.nasa_jpl_url).to.match(/^https?:\\/\\/[\\w\\-]+(\\.[\\w\\-]+)+[/#?]?.*$/, \"Invalid URL format\");",
+							"});",
+							"",
+							"",
+							"pm.test(\"is_potentially_hazardous_asteroid is a boolean value\", function () {",
+							"    const responseData = pm.response.json();",
+							"",
+							"    pm.expect(responseData.is_potentially_hazardous_asteroid).to.be.a('boolean');",
+							"});",
+							"",
+							"",
+							"pm.test(\"close_approach_data is an array with at least one element\", function () {",
+							"    const responseData = pm.response.json();",
+							"",
+							"    pm.expect(responseData.close_approach_data).to.be.an('array').and.to.have.lengthOf.at.least(1);",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.nasa.gov/neo/rest/v1/neo/3542519?api_key=DEMO_KEY",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nasa",
+						"gov"
+					],
+					"path": [
+						"neo",
+						"rest",
+						"v1",
+						"neo",
+						"3542519"
+					],
+					"query": [
+						{
+							"key": "api_key",
+							"value": "DEMO_KEY"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://apod.nasa.gov/apod/image/2309/CrescentBubble_AlHarbi_5732.jpg",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://apod.nasa.gov/apod/image/2309/CrescentBubble_AlHarbi_5732.jpg",
+					"protocol": "https",
+					"host": [
+						"apod",
+						"nasa",
+						"gov"
+					],
+					"path": [
+						"apod",
+						"image",
+						"2309",
+						"CrescentBubble_AlHarbi_5732.jpg"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Mars Rover Photos",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"",
+							"pm.test(\"Response status code is 200\", function () {",
+							"    pm.response.to.have.status(200);",
+							"});",
+							"",
+							"",
+							"pm.test(\"Validate the photos array is present and contains at least one element\", function () {",
+							"    const responseData = pm.response.json();",
+							"    pm.expect(responseData.photos).to.exist.and.to.be.an('array');",
+							"    pm.expect(responseData.photos).to.have.lengthOf.at.least(1, \"Photos array should contain at least one element\");",
+							"});",
+							"",
+							"pm.test(\"Validate that the 'id' field in each photo object is a non-negative integer\", function () {",
+							"    const responseData = pm.response.json();",
+							"",
+							"    pm.expect(responseData.photos).to.be.an('array');",
+							"    responseData.photos.forEach(function (photo) {",
+							"        pm.expect(photo.id).to.be.a('number');",
+							"        pm.expect(photo.id).to.be.at.least(0);",
+							"    });",
+							"});",
+							"",
+							"",
+							"pm.test(\"Validate that the 'sol' field in each photo object is a non-negative integer\", function () {",
+							"    const responseData = pm.response.json();",
+							"",
+							"    pm.expect(responseData).to.be.an('object');",
+							"    pm.expect(responseData.photos).to.exist.and.to.be.an('array');",
+							"",
+							"    responseData.photos.forEach(function (photo) {",
+							"        pm.expect(photo.sol).to.exist.and.to.be.a('number').and.to.be.above(-1);",
+							"    });",
+							"});",
+							"",
+							"",
+							"pm.test(\"Validate the date format in each photo object\", function () {",
+							"    const responseData = pm.response.json();",
+							"",
+							"    pm.expect(responseData).to.be.an('object');",
+							"    pm.expect(responseData.photos).to.exist.and.to.be.an('array');",
+							"",
+							"    responseData.photos.forEach(function (photo) {",
+							"        pm.expect(photo.earth_date).to.exist.and.to.match(/^\\d{4}-\\d{2}-\\d{2}$/);",
+							"    });",
+							"});",
+							"",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=DEMO_KEY",
+					"protocol": "https",
+					"host": [
+						"api",
+						"nasa",
+						"gov"
+					],
+					"path": [
+						"mars-photos",
+						"api",
+						"v1",
+						"rovers",
+						"curiosity",
+						"photos"
+					],
+					"query": [
+						{
+							"key": "sol",
+							"value": "1000"
+						},
+						{
+							"key": "api_key",
+							"value": "DEMO_KEY"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,429 @@
+{
+	"info": {
+		"_postman_id": "d7a88288-5bb2-470a-a61a-9f88c7ec629c",
+		"name": "Intercepter CA Market",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29356510"
+	},
+	"item": [
+		{
+			"name": "https://addresses.wixapps.net/_api/addresses-web/v1/addresses",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Chromium\";v=\"118\", \"Google Chrome\";v=\"118\", \"Not=A?Brand\";v=\"99\""
+					},
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "1698612390|8skVXkOfOPFU"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "authorization",
+						"value": "H3XjX47I9oUFVkLwHo0KOEDagp5c2MNVnGg9b5mvyHE.eyJpbnN0YW5jZUlkIjoiZjQ2Y2Q1MDItZjcyZi00NGY3LTk2MzgtNWRhMWRlYjBiNGU3IiwiYXBwRGVmSWQiOiIxNTA1Yjc3NS1lODg1LWViMWItYjY2NS0xZTQ4NWQ5YmY5MGUiLCJtZXRhU2l0ZUlkIjoiMjhiNzkzZDYtNTQyNC00MDU4LTgwNDktMDI2YTRkYjAyODJmIiwic2lnbkRhdGUiOiIyMDIzLTEwLTMwVDAwOjE1OjU3LjM5NloiLCJ1aWQiOiIwNTYyYzQzMi0xNWM5LTQ2Y2ItYmIyNi1jNzY3MTc2NDUxYzIiLCJkZW1vTW9kZSI6ZmFsc2UsImFpZCI6ImQ1YjliNzMxLWU1ODktNGI1Zi05Y2Q2LWU5MDk3N2E5Yjk4NSIsImJpVG9rZW4iOiJkY2RiNDZkNC1hMzBiLTA0YWYtMTY3MS01ZmNiOTMwMDljYzgiLCJzaXRlT3duZXJJZCI6ImY5MTRmMTFjLWFhYjMtNDUyNy04ZDRlLWJhYjc2MjE0M2E2MCIsImV4cGlyYXRpb25EYXRlIjoiMjAyMy0xMC0zMFQwNDoxNTo1Ny4zOTZaIiwiaGFzVXNlclJvbGUiOmZhbHNlfQ"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "commonConfig",
+						"value": "%7B%22brand%22%3A%22wix%22%2C%22host%22%3A%22VIEWER%22%2C%22BSI%22%3A%228ca4f5c9-67b9-44bf-a514-494f65cbfbe3%7C1%22%7D"
+					},
+					{
+						"key": "x-wix-brand",
+						"value": "wix"
+					},
+					{
+						"key": "X-Wix-Client-Artifact-Id",
+						"value": "addresses-modals"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "host",
+						"value": "addresses.wixapps.net"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"address\": {\r\n        \"fullName\": {\r\n            \"firstName\": \"Olga\",\r\n            \"lastName\": \"Ansari\"\r\n        },\r\n        \"company\": \"Express LLC\",\r\n        \"taxInfo\": {\r\n            \"id\": null,\r\n            \"type\": null\r\n        },\r\n        \"addressLine1\": \"7891 County Road 16a\",\r\n        \"addressLine2\": \"45\",\r\n        \"street\": {\r\n            \"name\": null,\r\n            \"number\": null\r\n        },\r\n        \"city\": \"St. Augustine\",\r\n        \"country\": \"USA\",\r\n        \"subdivision\": \"FL\",\r\n        \"zipCode\": \"32092\",\r\n        \"phoneNumber\": \"1234567890\",\r\n        \"location\": {\r\n            \"latitude\": 30.008477,\r\n            \"longitude\": -81.555345\r\n        }\r\n    },\r\n    \"setAsDefault\": false\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://addresses.wixapps.net/_api/addresses-web/v1/addresses",
+					"protocol": "https",
+					"host": [
+						"addresses",
+						"wixapps",
+						"net"
+					],
+					"path": [
+						"_api",
+						"addresses-web",
+						"v1",
+						"addresses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://addresses.wixapps.net/_api/addresses-web/v1/addresses",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Chromium\";v=\"118\", \"Google Chrome\";v=\"118\", \"Not=A?Brand\";v=\"99\""
+					},
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "1698612390|8skVXkOfOPFU"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "authorization",
+						"value": "H3XjX47I9oUFVkLwHo0KOEDagp5c2MNVnGg9b5mvyHE.eyJpbnN0YW5jZUlkIjoiZjQ2Y2Q1MDItZjcyZi00NGY3LTk2MzgtNWRhMWRlYjBiNGU3IiwiYXBwRGVmSWQiOiIxNTA1Yjc3NS1lODg1LWViMWItYjY2NS0xZTQ4NWQ5YmY5MGUiLCJtZXRhU2l0ZUlkIjoiMjhiNzkzZDYtNTQyNC00MDU4LTgwNDktMDI2YTRkYjAyODJmIiwic2lnbkRhdGUiOiIyMDIzLTEwLTMwVDAwOjE1OjU3LjM5NloiLCJ1aWQiOiIwNTYyYzQzMi0xNWM5LTQ2Y2ItYmIyNi1jNzY3MTc2NDUxYzIiLCJkZW1vTW9kZSI6ZmFsc2UsImFpZCI6ImQ1YjliNzMxLWU1ODktNGI1Zi05Y2Q2LWU5MDk3N2E5Yjk4NSIsImJpVG9rZW4iOiJkY2RiNDZkNC1hMzBiLTA0YWYtMTY3MS01ZmNiOTMwMDljYzgiLCJzaXRlT3duZXJJZCI6ImY5MTRmMTFjLWFhYjMtNDUyNy04ZDRlLWJhYjc2MjE0M2E2MCIsImV4cGlyYXRpb25EYXRlIjoiMjAyMy0xMC0zMFQwNDoxNTo1Ny4zOTZaIiwiaGFzVXNlclJvbGUiOmZhbHNlfQ"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "commonConfig",
+						"value": "%7B%22brand%22%3A%22wix%22%2C%22host%22%3A%22VIEWER%22%2C%22BSI%22%3A%228ca4f5c9-67b9-44bf-a514-494f65cbfbe3%7C1%22%7D"
+					},
+					{
+						"key": "x-wix-brand",
+						"value": "wix"
+					},
+					{
+						"key": "X-Wix-Client-Artifact-Id",
+						"value": "address-book"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "host",
+						"value": "addresses.wixapps.net"
+					}
+				],
+				"url": {
+					"raw": "https://addresses.wixapps.net/_api/addresses-web/v1/addresses",
+					"protocol": "https",
+					"host": [
+						"addresses",
+						"wixapps",
+						"net"
+					],
+					"path": [
+						"_api",
+						"addresses-web",
+						"v1",
+						"addresses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://addresses.wixapps.net/_api/addresses-web/v1/addresses/dc7c7d01-240b-43ce-8475-5e74f47398bb",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Chromium\";v=\"118\", \"Google Chrome\";v=\"118\", \"Not=A?Brand\";v=\"99\""
+					},
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "1698612390|8skVXkOfOPFU"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "authorization",
+						"value": "H3XjX47I9oUFVkLwHo0KOEDagp5c2MNVnGg9b5mvyHE.eyJpbnN0YW5jZUlkIjoiZjQ2Y2Q1MDItZjcyZi00NGY3LTk2MzgtNWRhMWRlYjBiNGU3IiwiYXBwRGVmSWQiOiIxNTA1Yjc3NS1lODg1LWViMWItYjY2NS0xZTQ4NWQ5YmY5MGUiLCJtZXRhU2l0ZUlkIjoiMjhiNzkzZDYtNTQyNC00MDU4LTgwNDktMDI2YTRkYjAyODJmIiwic2lnbkRhdGUiOiIyMDIzLTEwLTMwVDAwOjE1OjU3LjM5NloiLCJ1aWQiOiIwNTYyYzQzMi0xNWM5LTQ2Y2ItYmIyNi1jNzY3MTc2NDUxYzIiLCJkZW1vTW9kZSI6ZmFsc2UsImFpZCI6ImQ1YjliNzMxLWU1ODktNGI1Zi05Y2Q2LWU5MDk3N2E5Yjk4NSIsImJpVG9rZW4iOiJkY2RiNDZkNC1hMzBiLTA0YWYtMTY3MS01ZmNiOTMwMDljYzgiLCJzaXRlT3duZXJJZCI6ImY5MTRmMTFjLWFhYjMtNDUyNy04ZDRlLWJhYjc2MjE0M2E2MCIsImV4cGlyYXRpb25EYXRlIjoiMjAyMy0xMC0zMFQwNDoxNTo1Ny4zOTZaIiwiaGFzVXNlclJvbGUiOmZhbHNlfQ"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "commonConfig",
+						"value": "%7B%22brand%22%3A%22wix%22%2C%22host%22%3A%22VIEWER%22%2C%22BSI%22%3A%228ca4f5c9-67b9-44bf-a514-494f65cbfbe3%7C1%22%7D"
+					},
+					{
+						"key": "x-wix-brand",
+						"value": "wix"
+					},
+					{
+						"key": "X-Wix-Client-Artifact-Id",
+						"value": "addresses-modals"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "host",
+						"value": "addresses.wixapps.net"
+					}
+				],
+				"url": {
+					"raw": "https://addresses.wixapps.net/_api/addresses-web/v1/addresses/dc7c7d01-240b-43ce-8475-5e74f47398bb",
+					"protocol": "https",
+					"host": [
+						"addresses",
+						"wixapps",
+						"net"
+					],
+					"path": [
+						"_api",
+						"addresses-web",
+						"v1",
+						"addresses",
+						"dc7c7d01-240b-43ce-8475-5e74f47398bb"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://addresses.wixapps.net/_api/addresses-web/v1/addresses",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Chromium\";v=\"118\", \"Google Chrome\";v=\"118\", \"Not=A?Brand\";v=\"99\""
+					},
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "1698612390|8skVXkOfOPFU"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "authorization",
+						"value": "H3XjX47I9oUFVkLwHo0KOEDagp5c2MNVnGg9b5mvyHE.eyJpbnN0YW5jZUlkIjoiZjQ2Y2Q1MDItZjcyZi00NGY3LTk2MzgtNWRhMWRlYjBiNGU3IiwiYXBwRGVmSWQiOiIxNTA1Yjc3NS1lODg1LWViMWItYjY2NS0xZTQ4NWQ5YmY5MGUiLCJtZXRhU2l0ZUlkIjoiMjhiNzkzZDYtNTQyNC00MDU4LTgwNDktMDI2YTRkYjAyODJmIiwic2lnbkRhdGUiOiIyMDIzLTEwLTMwVDAwOjE1OjU3LjM5NloiLCJ1aWQiOiIwNTYyYzQzMi0xNWM5LTQ2Y2ItYmIyNi1jNzY3MTc2NDUxYzIiLCJkZW1vTW9kZSI6ZmFsc2UsImFpZCI6ImQ1YjliNzMxLWU1ODktNGI1Zi05Y2Q2LWU5MDk3N2E5Yjk4NSIsImJpVG9rZW4iOiJkY2RiNDZkNC1hMzBiLTA0YWYtMTY3MS01ZmNiOTMwMDljYzgiLCJzaXRlT3duZXJJZCI6ImY5MTRmMTFjLWFhYjMtNDUyNy04ZDRlLWJhYjc2MjE0M2E2MCIsImV4cGlyYXRpb25EYXRlIjoiMjAyMy0xMC0zMFQwNDoxNTo1Ny4zOTZaIiwiaGFzVXNlclJvbGUiOmZhbHNlfQ"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "commonConfig",
+						"value": "%7B%22brand%22%3A%22wix%22%2C%22host%22%3A%22VIEWER%22%2C%22BSI%22%3A%228ca4f5c9-67b9-44bf-a514-494f65cbfbe3%7C1%22%7D"
+					},
+					{
+						"key": "x-wix-brand",
+						"value": "wix"
+					},
+					{
+						"key": "X-Wix-Client-Artifact-Id",
+						"value": "address-book"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "host",
+						"value": "addresses.wixapps.net"
+					}
+				],
+				"url": {
+					"raw": "https://addresses.wixapps.net/_api/addresses-web/v1/addresses",
+					"protocol": "https",
+					"host": [
+						"addresses",
+						"wixapps",
+						"net"
+					],
+					"path": [
+						"_api",
+						"addresses-web",
+						"v1",
+						"addresses"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://addresses.wixapps.net/_api/addresses-web/v1/addresses/dc7c7d01-240b-43ce-8475-5e74f47398bb",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "sec-ch-ua",
+						"value": "\"Chromium\";v=\"118\", \"Google Chrome\";v=\"118\", \"Not=A?Brand\";v=\"99\""
+					},
+					{
+						"key": "X-XSRF-TOKEN",
+						"value": "1698612390|8skVXkOfOPFU"
+					},
+					{
+						"key": "sec-ch-ua-mobile",
+						"value": "?0"
+					},
+					{
+						"key": "authorization",
+						"value": "H3XjX47I9oUFVkLwHo0KOEDagp5c2MNVnGg9b5mvyHE.eyJpbnN0YW5jZUlkIjoiZjQ2Y2Q1MDItZjcyZi00NGY3LTk2MzgtNWRhMWRlYjBiNGU3IiwiYXBwRGVmSWQiOiIxNTA1Yjc3NS1lODg1LWViMWItYjY2NS0xZTQ4NWQ5YmY5MGUiLCJtZXRhU2l0ZUlkIjoiMjhiNzkzZDYtNTQyNC00MDU4LTgwNDktMDI2YTRkYjAyODJmIiwic2lnbkRhdGUiOiIyMDIzLTEwLTMwVDAwOjE1OjU3LjM5NloiLCJ1aWQiOiIwNTYyYzQzMi0xNWM5LTQ2Y2ItYmIyNi1jNzY3MTc2NDUxYzIiLCJkZW1vTW9kZSI6ZmFsc2UsImFpZCI6ImQ1YjliNzMxLWU1ODktNGI1Zi05Y2Q2LWU5MDk3N2E5Yjk4NSIsImJpVG9rZW4iOiJkY2RiNDZkNC1hMzBiLTA0YWYtMTY3MS01ZmNiOTMwMDljYzgiLCJzaXRlT3duZXJJZCI6ImY5MTRmMTFjLWFhYjMtNDUyNy04ZDRlLWJhYjc2MjE0M2E2MCIsImV4cGlyYXRpb25EYXRlIjoiMjAyMy0xMC0zMFQwNDoxNTo1Ny4zOTZaIiwiaGFzVXNlclJvbGUiOmZhbHNlfQ"
+					},
+					{
+						"key": "User-Agent",
+						"value": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/118.0.0.0 Safari/537.36"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json, text/plain, */*"
+					},
+					{
+						"key": "commonConfig",
+						"value": "%7B%22brand%22%3A%22wix%22%2C%22host%22%3A%22VIEWER%22%2C%22BSI%22%3A%228ca4f5c9-67b9-44bf-a514-494f65cbfbe3%7C1%22%7D"
+					},
+					{
+						"key": "x-wix-brand",
+						"value": "wix"
+					},
+					{
+						"key": "X-Wix-Client-Artifact-Id",
+						"value": "address-book"
+					},
+					{
+						"key": "sec-ch-ua-platform",
+						"value": "\"Windows\""
+					},
+					{
+						"key": "Sec-Fetch-Site",
+						"value": "same-origin"
+					},
+					{
+						"key": "Sec-Fetch-Mode",
+						"value": "cors"
+					},
+					{
+						"key": "Sec-Fetch-Dest",
+						"value": "empty"
+					},
+					{
+						"key": "host",
+						"value": "addresses.wixapps.net"
+					}
+				],
+				"url": {
+					"raw": "https://addresses.wixapps.net/_api/addresses-web/v1/addresses/dc7c7d01-240b-43ce-8475-5e74f47398bb",
+					"protocol": "https",
+					"host": [
+						"addresses",
+						"wixapps",
+						"net"
+					],
+					"path": [
+						"_api",
+						"addresses-web",
+						"v1",
+						"addresses",
+						"dc7c7d01-240b-43ce-8475-5e74f47398bb"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
